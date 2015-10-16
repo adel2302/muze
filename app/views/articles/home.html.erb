@@ -1,7 +1,6 @@
 <div class="row">
 <div class="col-md-6 col-md-offset-3">
 <h1>Articles#home</h1><div class="col s10 offset-s1 m10 offset-m1 l10 offset-l1">
-
   <h2>Titre : <%= @article["title"] %></h2>
   <hr />
   <h4>Chapo : <%= @article["chapo"] %></h4>
@@ -11,5 +10,7 @@
 </div>
 <%= link_to "Article précédent", "/?page=#{params[:page]-1}" %>
 <%= link_to "Article suivant", "/?page=#{params[:page]+1}" %>
+<%= link_to "Voir l'article", "/articles/#{@article['id']}" %>
 </div>
 </div>
+

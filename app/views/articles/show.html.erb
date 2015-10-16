@@ -1,0 +1,11 @@
+ <h2>Titre : <%= @article["title"] %></h2>
+  <hr />
+  <h4>Chapo : <%= @article["chapo"] %></h4>
+  <hr />
+  <p>Content :</p>
+  <p><%= @article["content"] %></p>
+  <% if user_signed_in? %>
+      <p>je suis connecté</p>
+    <% else %>
+      <p>Je ne suis pas connect</p>
+  <% end %>
