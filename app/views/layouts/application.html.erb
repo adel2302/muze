@@ -7,19 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-inverse">
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+    
+  
     <% if user_signed_in? %>
 						<ul>
-							<li><%= link_to 'Account', edit_user_registration_path %></li>
-							<li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+							<li class="btn btn-success"><%= link_to 'Account', edit_user_registration_path %></li>
+							<li class="btn btn-primary"><%= link_to 'Sign out', destroy_user_session_path,class:"btn btn-success", :method => :delete %></li>
 						</ul>
 					<% else %>
 						<ul>
-							<li><%= link_to 'Sign up', new_user_registration_path %></li>
-							<li><%= link_to 'Sign in', new_user_session_path %></li>
+							<li><%= link_to 'Sign up', new_user_registration_path, class:"btn btn-primary" %></li>
+							<li><%= link_to 'Sign in', new_user_session_path, class:"btn btn-success" %></li>
 						</ul>
+						<h2>Muse</h2>
+						
 	<% end %>
+</nav>
 <%= yield %>
 
 </body>
