@@ -1,6 +1,7 @@
 class MarksController < ApplicationController
   def home
   	@marks = Mark.all
+  	@mark = Mark.find_by_article_id(params[:id])
   	articles
   end
 

@@ -1,4 +1,9 @@
-<h1>Marks#home</h1>
+<h1>Ma box</h1>
+<% if user_signed_in? %>
 <% current_user.marks.each do |mark| %>
- <p><%= @articles.find{|a| a['id'] == mark.article_id}["title"] %></p>
+ <p><a href="/articles/<%= mark.article_id %>"><%= @articles.find{|a| a['id'] == mark.article_id}["title"] %></a></p>
+<% end %> 
+<% else %>
+  <p>Votre liste est vide</p>
 <% end %>
+ <a href="/">Retour</a>

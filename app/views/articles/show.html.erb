@@ -4,11 +4,12 @@
   <hr />
   <p>Content :</p>
   <p><%= @article["content"] %></p>
-  <% if user_signed_in? %>
-    <%= form_tag '/marks/save', method: :post do %>
-      <input type='hidden' name='id_article' value='<%= @article["id"]%>'>
-      <input type= 'submit' value='Sauvegarder dans ma box' >
-    <% end %>
+  <% if user_signed_in? %> 
+        <%= form_tag '/marks/save', method: :post do %>
+          <input type='hidden' name='id_article' value='<%= @article["id"]%>'>
+          <input type= 'submit' value='Sauvegarder dans ma box' >
+        <% end %>
+        <p><a href="/marks/home">Retour à ma box</a></p>
   <% else %>
-      <p>Je ne suis pas connect</p>
-  <% end %>
+  <% end %> 
+  <a href="/">Retour</a>
