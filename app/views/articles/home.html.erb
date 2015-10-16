@@ -10,8 +10,10 @@
 </div>
 <%= link_to "Article précédent", "/?page=#{params[:page]-1}" %>
 <%= link_to "Article suivant", "/?page=#{params[:page]+1}" %>
+<br>
 <%= link_to "Voir l'article", "/articles/#{@article['id']}" %>
 </div>
 </div>
-<%= link_to "Ma box", "/marks/home" %>
-
+<div class="col-md-12" style="background-color:black; margin-top:20px;">
+<%= link_to image_tag("box.png"), "/marks/home" %>
+</div>
