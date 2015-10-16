@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'marks/home' => 'marks#home'
+  post 'marks/save' => 'marks#create'
+
   devise_for :users
   root 'articles#home'
   get 'articles/:id' => 'articles#show'
